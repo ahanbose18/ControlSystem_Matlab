@@ -1,0 +1,10 @@
+clc;
+close all;
+sys=tf([2 0.5],[1 1.5 0.5 0 0]);
+bode(sys);
+margin(sys);
+[Gm,Pm,Wcg,Wcp] = margin(sys);
+disp(Gm);
+disp(Pm);
+disp(Wcg);
+disp(Wcp);

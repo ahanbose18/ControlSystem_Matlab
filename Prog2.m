@@ -1,0 +1,17 @@
+clc;
+close all;
+sys=tf([1.5],[1 0.5 1.5]);
+subplot(2,2,1);
+step(sys);
+S=stepinfo(sys);
+disp(S);
+sys1=tf([-1 3],[3 1.5 4.5]);
+subplot(2,2,2);
+step(sys1);
+S1=stepinfo(sys1);
+disp(S1);
+sys2=tf([1 3],[3 1.5 4.5]);
+subplot(2,2,3);
+step(sys2);
+S2=stepinfo(sys2);
+disp(S2);
